@@ -58,4 +58,4 @@ Console.Write("Enter the row position: ");
 int rowPos = int.Parse(Console.ReadLine());
 Console.Write("Enter the column position: ");
 int columnPos = int.Parse(Console.ReadLine());
-Console.WriteLine($"Число {SearchElement(arr_1,rowPos, columnPos)} находится на позиции {rowPos}, {columnPos}");
+Console.WriteLine($"Число {SearchElement(arr_1,rowPos, columnPos)} находится на позиции {rowPos}, {columnPos} ");
