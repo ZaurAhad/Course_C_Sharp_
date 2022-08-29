@@ -30,7 +30,7 @@ int[,] MassNums(int row, int column, int from, int to)
     return arr;
 }
 
-int[] Average(int[,] arr)
+int[] Sum(int[,] arr)
 {
     int[] resultArr = new int[arr.GetLength(1)];
 
@@ -44,12 +44,13 @@ int[] Average(int[,] arr)
     return resultArr;
 }
 
-void Print2(int[] arr)
+void Average(int[] arr)
 {
     int size = arr.Length;
 
     for (int i = 0; i < size; i++)
     {
+        arr[i] = arr[i] / arr.Length;
         Console.Write($"{arr[i]} ");
     }
     Console.WriteLine();
@@ -62,4 +63,4 @@ int column = int.Parse(Console.ReadLine());
 
 int[,] arr_1 = MassNums(row, column, 1, 11);
 Print(arr_1);
-Print2(Average(arr_1));
+Average(Sum(arr_1));
