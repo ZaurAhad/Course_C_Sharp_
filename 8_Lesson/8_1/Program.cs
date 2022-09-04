@@ -42,6 +42,17 @@ int [,] ReverseFirstEndRow(int[,] arr)
     }
     return arr;
 }
+// Второй вариант реализации 
+void FirstWithLast(int[,] arr)
+{
+    int row = arr.GetLength(0);
+    int column = arr.GetLength(1);
+
+    for (int i = 0; i < column; i++)
+    {
+        (arr[0, i], arr[row - 1, i]) = (arr[row - 1, i], arr[0, i]);
+    }
+}
 
 Console.Write("Enter the number of rows: ");
 int row = int.Parse(Console.ReadLine());
@@ -51,4 +62,6 @@ int column = int.Parse(Console.ReadLine());
 int[,] arr_1 = MassNums(row, column, 1, 11);
 Print(arr_1);
 ReverseFirstEndRow(arr_1);
+Print(arr_1);
+FirstWithLast(arr_1);
 Print(arr_1);
